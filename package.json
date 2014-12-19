@@ -1,0 +1,37 @@
+{
+  "name": "brando"
+  , "version": "0.0.1"
+  , "description": "Brando."
+  , "homepage": "https://github.com/rootslab/brando"
+  , "private": false
+  , "repository": {
+    "type": "git"
+    , "url": "git://github.com/rootslab/brando.git"
+  }
+  , "keywords": [
+    "brando"
+    , "util"
+  ]
+  , "author": {
+    "name": "Guglielmo Ferri"
+    , "email": "44gatti@gmail.com"
+  }
+  , "dependencies": {
+     "bolgia" : ">=2.7.4"
+  },
+  "devDependencies": {
+     "dado" : ">=0.2.0"
+  }
+  , "main": "index"
+  , "engines": {
+    "node": ">=0.10.x"
+  }
+  , "scripts": {
+    "test": "node test/run.js"
+  }
+  , "license": "MIT"
+  , "readmeFilename": "Readme.md"
+  , "bugs": {
+    "url": "https://github.com/rootslab/brando/issues"
+  }
+}
