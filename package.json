@@ -1,6 +1,6 @@
 {
   "name": "brando"
-  , "version": "0.0.7"
+  , "version": "0.0.8"
   , "description": "Brando."
   , "homepage": "https://github.com/rootslab/brando"
   , "private": false
@@ -19,6 +19,7 @@
   , "dependencies": {
      "bice" : ">=0.1.3"
      , "bolgia" : ">=2.7.4"
+     , "toni" : ">=0.4.2"
   },
   "devDependencies": {
      "dado" : ">=0.2.0"
