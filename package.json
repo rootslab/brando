@@ -1,6 +1,6 @@
 {
   "name": "brando"
-  , "version": "0.0.15"
+  , "version": "0.0.16"
   , "description": "Brando."
   , "homepage": "https://github.com/rootslab/brando"
   , "private": false
@@ -17,7 +17,7 @@
     , "email": "44gatti@gmail.com"
   }
   , "dependencies": {
-     "bice" : ">=0.1.4"
+     "bice" : ">=0.2.0"
      , "toni" : ">=0.4.2"
   },
   "devDependencies": {
