@@ -56,15 +56,16 @@ var Brando  = require( 'brando' );
 ```javascript
 /*
  * A simple factory method, it returns a Sequence EventEmitter,
- * to use for producing the requested random (Buffer) sequence.
+ * for producing the requested random (Buffer) sequence/permutation.
  *
  * NOTE:
- * - max value allowed for items is 2^16 (65536).
+ * - max allowed value for items is 2^(16) - 1 (65535), see comments in the code.
  * - max value for range is 2^32, or 4-byte numbers.
  * - unlimitied repetitions for items are enabled for default (+Infinity),
- *   use 1 to produce a full or a partial range permutation.
+ *   otherwise use repeat === 1 to produce a full or a partial range permutation.
+ *   
  */
-Brando#get : function ( Number items, Number range [, Number repetitions ] ) : Sequence
+Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
 
 ```
 
