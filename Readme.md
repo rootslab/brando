@@ -69,7 +69,7 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 
 /*
  * Print some informational numbers about a particular sequence or permutation,
- * without creating anythnig.
+ * without creating anything.
  */
 Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
 
