@@ -67,6 +67,12 @@ var Brando  = require( 'brando' );
  */
 Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
 
+/*
+ * Print some informational numbers about a particular sequence or permutation.
+ *   
+ */
+Brando#info : function ( Number items, Number range [, Number repeat ] ) : Sequence
+
 ```
 
 ### MIT License
