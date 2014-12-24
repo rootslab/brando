@@ -18,6 +18,7 @@
   }
   , "dependencies": {
      "bice" : ">=0.2.0"
+      , "bolgia" : ">=2.7.4"
      , "toni" : ">=0.5.0"
   },
   "devDependencies": {
