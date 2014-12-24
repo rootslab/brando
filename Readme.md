@@ -74,7 +74,7 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
 
 /*
- * Get a Transform stream.
+ * Like #get, but it returns a Transform stream.
  */
 Brando#stream : function ( Number items, Number range [, Number repeat [, Object stream_opt ] ] ) : SeqTransStream
 
