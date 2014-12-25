@@ -1,4 +1,6 @@
 var log = console.log
+    , floor = Math.floor
+    , random = Math.random
     , FullPerm = require( '../lib/filters/fullperm' )
     , test = function ( mbytes, items ) {
         var mb = Math.max( mbytes, 1 )
@@ -18,9 +20,9 @@ var log = console.log
             }
             ;
 
-        log( '\n- filling test buffer (%d MB)..', mb );
+        log( '\n- filling test buffer with %d bits values (%d MB)..', fp.ibits, mb );
 
-        for ( ; k < b.length; ++k ) b[ k ] = 0xe0 + k;
+        for ( ; k <= b.length - fp.ibytes; k += fp.ibytes ) b[ fp.wuint ]( floor( random() * ( 1 << fp.ibits ) ), k );
 
         fp.once( 'feed', onFeed );
         fp.once( 'fart', onFart );
@@ -42,8 +44,8 @@ test( 8, 1024 * 1024 );
 
 // 8 bits numbers, 1 byte
 
-test( 8, 256 );
-test( 8, 128 );
-test( 8, 129 );
+test( 1, 256 );
+test( 1, 128 );
+test( 1, 129 );
 
 log();
