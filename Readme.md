@@ -55,9 +55,7 @@ var Brando  = require( 'brando' );
 
 ```javascript
 /*
- * A simple factory method, it returns a Sequence EventEmitter,for filling a
- * random (Buffer) sequence/permutation only with values the current selected
- * range.
+ * A simple factory method, it returns a Sequence EventEmitter.
  *
  * NOTE:
  * - max allowed value for items and range is 2^(32) - 1 (4 bytes values).
