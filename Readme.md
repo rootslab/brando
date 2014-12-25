@@ -59,8 +59,7 @@ var Brando  = require( 'brando' );
  * for producing the requested random (Buffer) sequence/permutation.
  *
  * NOTE:
- * - max allowed value for items is 2^(16) - 1 (65535), see comments in the code.
- * - max value for range is 2^32, or 4-byte numbers.
+ * - max allowed value for items and range is 2^(32) - 1, or 4-byte numbers.
  * - unlimitied repetitions for items are enabled for default (+Infinity),
  *   otherwise use repeat === 1 to produce a full or a partial range permutation.
  *   
