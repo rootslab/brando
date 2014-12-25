@@ -49,11 +49,6 @@ test( 8, 1024, 1024 * 1024 );
 test( 8, 768 * 1024, 1024 * 1024 + 1);
 test( 8, 512 * 1024, 1024 * 1024 + 1 );
 test( 8, 128 * 1024, 1024 * 1024 + 1 );
-/*
- * items = radix(range), then we expect to consume:
- * ( ( range + radix(range) ) / 2 ) bytes for every
- * value, or >~50% probability >~1/2 ).
- */
 test( 8, 512 * 1024, 1024 * 1024 + 1 );
 
 log();
