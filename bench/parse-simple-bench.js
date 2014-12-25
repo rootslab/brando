@@ -1,5 +1,4 @@
 var log = console.log
-    , Brando = require( '../' )
     , Sequence = require( '../lib/filters/sequence' )
     , test = function ( mbytes, items, range ) {
         var mb = Math.max( mbytes, 1 )
@@ -41,6 +40,5 @@ var log = console.log
 test( 8, 64 * 1024, 33 );
 test( 8, 64 * 1024, 32 );
 test( 8, 64 * 1024, 28 );
-
 
 log();
