@@ -1,12 +1,14 @@
 var log = console.log
     , floor = Math.floor
     , random = Math.random
-    , FullPerm = require( '../lib/filters/fullperm' )
-    , test = function ( mbytes, items ) {
+    , Sequence = require( '../lib/filters/emitters/sequence' )
+    , test = function ( mbytes, items, range ) {
         var mb = Math.max( mbytes, 1 )
             , b = new Buffer( mb * 1024 * 1024 )
+            , r = range >>> 0
             , i = items >>> 0
-            , fp = new FullPerm( i )
+
+            , seq = new Sequence( i, r )
             , stime = -1
             , etime= -1
             , k = 0
@@ -20,32 +22,35 @@ var log = console.log
             }
             ;
 
-        log( '\n- filling test buffer with %d bits values (%d MB)..', fp.ibits, mb );
+        log( '\n- filling test buffer with %d bits values (%d MB)..', seq.ibits, mb );
 
-        for ( ; k <= b.length - fp.ibytes; k += fp.ibytes ) b[ fp.wuint ]( floor( random() * ( 1 << fp.ibits ) ), k );
+        for ( ; k <= b.length - seq.ibytes; k += seq.ibytes ) b[ seq.wuint ]( floor( random() * ( 1 << seq.ibits ) ), k );
 
-        fp.once( 'feed', onFeed );
-        fp.once( 'fart', onFart );
+        seq.once( 'feed', onFeed );
+        seq.once( 'fart', onFart );
 
-        log( '- range: [%d, %d]..', 0, i - 1 );
+        log( '- range: [%d, %d]..', 0, r - 1 );
         log( '- items: %d', i );
         log( '- parsing test buffer.' );
 
         stime = Date.now();
 
-        fp.parse( b );
+        seq.parse( b );
 
     };
 
 // 24 bits numbers, 3 bytes
 
-test( 8, 1024 * 1024 + 1 );
-test( 8, 1024 * 1024 );
+test( 8, 1024 * 1024, 1024 * 1024 + 1 );
+test( 8, 1024 * 1024, 1024 * 257 );
+test( 6, 1024 * 1024, 1024 * 360 );
+test( 4, 1024 * 1024, 1024 * 1024 );
+test( 4, 1024 * 1024, 1024 * 256 );
 
 // 8 bits numbers, 1 byte
 
-test( 1, 256 );
-test( 1, 128 );
-test( 1, 129 );
+test( 6, 1024 * 1024, 256 );
+test( 6, 1024 * 1024, 128 );
+test( 6, 1024 * 1024, 129 );
 
 log();
