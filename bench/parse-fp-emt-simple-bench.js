@@ -39,13 +39,13 @@ var log = console.log
 
 // 24 bits numbers, 3 bytes
 
-test( 16, 1024 * 1024 + 1 );
-test( 8, 1024 * 1024 );
+test( 8, 1024 * 1024 + 1 );
+test( 6, 1024 * 1024 );
 
 // 8 bits numbers, 1 byte
 
-//test( 1, 256 );
-//test( 1, 128 );
-//test( 1, 129 );
+test( 1, 256 );
+test( 1, 128 );
+test( 1, 129 );
 
 log();
