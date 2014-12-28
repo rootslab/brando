@@ -65,10 +65,12 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 ####Brando.get
 
 > A simple factory method, it returns an EventEmitter that parses random data and emits results
-> with selected items and within the selelected range .
-> It repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_ (_EventEmitter_),
-> otherwise a sub-type of Sequence, if items === range, a _[FullPerm](lib/filters/emitters/fullperm)_,
-> else a _[PartPerm](lib/filters/emitters/partperm)_.
+> with the number of selected items and within the selected range. Intrnally, it creates an empty
+> Buffer of the desired length for result values, you could fill it with Math.random or through a
+> random source of data.
+> It repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_, otherwise a
+> sub-type of Sequence. When items===range, it returns a _[FullPerm](lib/filters/emitters/fullperm)_,
+> otherwise a _[PartPerm](lib/filters/emitters/partperm)_.
 
 ```javascript
 /*
