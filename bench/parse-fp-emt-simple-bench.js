@@ -11,11 +11,11 @@ var log = console.log
             , etime= -1
             , k = 0
             , onFeed = function ( bytes, used_ratio ) {
-                log( ' :feed, need other %d bytes, used: %d%', bytes, ( used_ratio * 100 ).toFixed( 2 ) );
+                log( ' :feed, need other %d bytes, consumed: %d%', bytes, ( used_ratio * 100 ).toFixed( 2 ) );
             }
             , onFart = function ( result, used_ratio ) {
                 etime = Date.now();
-                log( '  :fart %d bytes, used: %d%', result.length, ( used_ratio * 100 ).toFixed( 2 ) );
+                log( '  :fart %d bytes, consumed: %d%', result.length, ( used_ratio * 100 ).toFixed( 2 ) );
                 log( '- parsed result in: %d s\n', ( etime - stime ) / 1000 );
             }
             ;

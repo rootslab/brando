@@ -86,7 +86,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *
  *   Sequence#fill : function () : Sequence
  *
- * - for resetting internal status:
+ * - for resetting internal status and result buffer, before reusing it:
  *
  *   Sequence#clear : function ( [ Boolean zerofill ] ) : Sequence
  *
@@ -95,8 +95,8 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *   Sequence#parse : function ( Buffer data ) : undefined
  *
  * - using #parse, it emits:
- *   - 'feed' when it needs more random data.
- *   - 'fart' when result is ready.
+ *   - 'feed' when needs more data: function ( Number miss_bytes, Number curr_usage_ratio )
+ *   - 'fart' when result is ready: function ( Number missing_bytes, Buffer result, Number curr_usage_ratio )
  */
 Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
 ```
