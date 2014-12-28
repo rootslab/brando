@@ -1,6 +1,6 @@
 {
   "name": "brando"
-  , "version": "0.0.40"
+  , "version": "0.0.41"
   , "description": "Brando."
   , "homepage": "https://github.com/rootslab/brando"
   , "private": false
@@ -10,6 +10,17 @@
   }
   , "keywords": [
     "brando"
+    , "random"
+    , "shuffle"
+    , "Fisher Yates"
+    , "sequences"
+    , "permutations"
+    , "full permutations"
+    , "partial permutations"
+    , "stream"
+    , "filter stream"
+    , "transform stream"
+    , "buffer"
     , "util"
   ]
   , "author": {

@@ -57,6 +57,12 @@ var Brando  = require( 'brando' );
 /*
  * A simple factory method, it returns a Sequence EventEmitter.
  *
+ * - if repeat === 1
+ *   - if items >= range, it returns a FullPerm.
+ *   - if items < range, a PartPerm.
+ *
+ * - otherwise, it returns a Sequence (unlimited repetitions).
+ *
  * NOTE:
  * - max allowed value for items and range is 2^(32) - 1 (4 bytes values).
  * - virtually, there is no size limit for sequence with repetitions, instead,
@@ -75,6 +81,19 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 
 /*
  * Like #get, but it returns a Transform stream, see examples.
+ *
+ * - if repeat === 1
+ *   - if items >= range, it returns a FPTransStream.
+ *   - if items < range, a PPTransStream.
+ *
+ * - otherwise, it returns a SeqTransStream (unlimited repetitions).
+ *
+ * - for default, stream_opt:
+ * {
+ *  highWaterMark : 16 * 1024
+ *  , encoding : null
+ *  , objectMode : false
+ }
  */
 Brando#stream : function ( Number items, Number range [, Number repeat [, Object stream_opt ] ] ) : SeqTransStream
 
