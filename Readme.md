@@ -65,7 +65,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 ####Brando.get
 
 > A simple factory method, it returns a _[Sequence](lib/filters/emitters/sequence)_ (_EventEmitter_), or a type that
-> inherits from [Sequence](lib/filters/emitters/sequence), respectively _[FullPerm](lib/filters/emitters/fullperm)_ and _[PartPerm](lib/filters/emitters/partperm)_.
+> inherits from _[Sequence](lib/filters/emitters/sequence)_, respectively _[FullPerm](lib/filters/emitters/fullperm)_ and _[PartPerm](lib/filters/emitters/partperm)_.
 
 ```javascript
 /*
@@ -111,12 +111,6 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 > Use a Transform stream to consume random data from an input source, it outputs
 > results within the selected _range_ of values, limiting the number to _items_.
 
-> __NOTE__: __How many bytes will be consumed__ to produce 1 byte of result,
-> __depends on many factors__, items, range, repetition, but __moreover on the
-> quality of random data__, parsed from the input source to pipe in.
-
-> See also [examples](example/).
-
 > A simple factory method, it returns a _[SeqTransStream](lib/filters/streams/sequence-transform)_
 > (_stream.Transform_), or a type that inherits from _[SeqTransStream](lib/filters/streams/sequence-transform)_,
 > respectively _[FPTransStream](lib/filters/streams/fullperm-transform)_
@@ -144,6 +138,12 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
  */
 Brando#stream : function ( Number items, Number range [, Number repeat [, Object stream_opt ] ] ) : SeqTransStream
 ```
+> __NOTE__: __How many bytes will be consumed__ to produce 1 byte of result,
+> __depends on many factors__, items, range, repetition, but __moreover on the
+> quality of random data__, parsed from the input source to pipe in.
+
+> See also [examples](example/).
+
 
 ### MIT License
 
