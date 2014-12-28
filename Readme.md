@@ -64,8 +64,8 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 
 ####Brando.get
 
-> A simple factory method, it returns a Sequence (EventEmitter), or a type that
-> inherits from Sequence, respectively FullPerm and PartPerm.
+> A simple factory method, it returns a _[Sequence](lib/filters/emitters/sequence)_ (_EventEmitter_), or a type that
+> inherits from [Sequence](lib/filters/emitters/sequence), respectively _[FullPerm](lib/filters/emitters/fullperm)_ and _[PartPerm](lib/filters/emitters/partperm)_.
 
 ```javascript
 /*
@@ -98,7 +98,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
 ```
 > __NOTE__:
-> - max allowed value for items and range is __2^(32) - 1__, or 4 bytes values.
+> - max allowed value for items and range is __2^(32)-1__, or __4 bytes__ values.
 > - max output size for sequences is __16GB__. Virtually, there is no size limit
 >   for sequences with repetitions, but the max length for __FP__ and __PP__ is limited
 >   to:
@@ -111,11 +111,16 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 > Use a Transform stream to consume random data from an input source, it outputs
 > results within the selected _range_ of values, limiting the number to _items_.
 
-> __NOTE__: How many bytes will be consumed to produce 1 byte of result,
-> depends on many factors, items, range, repetition, but moreover on the
-> quality of random data, parsed from the input source to pipe.
+> __NOTE__: __How many bytes will be consumed__ to produce 1 byte of result,
+> __depends on many factors__, items, range, repetition, but __moreover on the
+> quality of random data__, parsed from the input source to pipe in.
 
 > See also [examples](example/).
+
+> A simple factory method, it returns a _[SeqTransStream](lib/filters/streams/sequence-transform)_
+> (_stream.Transform_), or a type that inherits from _[SeqTransStream](lib/filters/streams/sequence-transform)_,
+> respectively _[FPTransStream](lib/filters/streams/fullperm-transform)_
+> and _[PPTransStream](lib/filters/streams/partperm-transform)_.
 
 ####Brando.stream
 
