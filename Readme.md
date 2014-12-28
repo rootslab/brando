@@ -69,7 +69,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 > Buffer of the desired length for result values, you could fill it with Math.random or through a
 > random source of data.
 > It repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_, otherwise a
-> sub-type of Sequence. When items===range, it returns a _[FullPerm](lib/filters/emitters/fullperm)_,
+> sub-type of Sequence; when items value is equal to range, it returns a _[FullPerm](lib/filters/emitters/fullperm)_,
 > otherwise a _[PartPerm](lib/filters/emitters/partperm)_.
 
 ```javascript
