@@ -111,12 +111,12 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 > Use a Transform stream to consume random data from an input source, it outputs
 > results within the selected _range_ of values, limiting the number to _items_.
 
+####Brando.stream
+
 > A simple factory method, it returns a _[SeqTransStream](lib/filters/streams/sequence-transform)_
 > (_stream.Transform_), or a type that inherits from _[SeqTransStream](lib/filters/streams/sequence-transform)_,
 > respectively _[FPTransStream](lib/filters/streams/fullperm-transform)_
 > and _[PPTransStream](lib/filters/streams/partperm-transform)_.
-
-####Brando.stream
 
 ```javascript
 /*
