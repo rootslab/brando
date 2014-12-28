@@ -53,41 +53,74 @@ var Brando  = require( 'brando' );
 
 > Arguments within [ ] are optional.
 
+####Brando.sham
+
+> Print some informational numbers about a particular sequence or permutation,
+> without creating anything.
+
 ```javascript
-
-/*
- * Print some informational numbers about a particular sequence or permutation,
- * without creating anything.
- */
 Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
+```
 
+####Brando.get
+
+> A simple factory method, it returns a Sequence (EventEmitter), or a type that
+> inherits from Sequence, respectively FullPerm and PartPerm.
+
+```javascript
 /*
- * A simple factory method, it returns a Sequence (EventEmitter), or a type that
- * inherits from Sequence.
+ * For default, repeat = +Infinity, or unlimited repetitions.
  *
  * - if repeat === 1
  *   - if items >= range, it returns a FullPerm.
  *   - if items < range, a PartPerm.
+ *
  * - otherwise, it returns a Sequence (unlimited repetitions).
  *
- * Sequence emits:
+ * Every instance of the Sequence EventEmitter, has 3 methods:
+ * 
+ * - for filling the Buffer with Math.random:
+ *
+ *   Sequence#fill : function () : Sequence
+ *
+ * - for resetting internal status:
+ *
+ *   Sequence#clear : function ( [ Boolean zerofill ] ) : Sequence
+ *
+ * - for parsing input data from a random source:
+ *
+ *   Sequence#parse : function ( Buffer data ) : undefined
+ *
+ * - using #parse, it emits:
  *   - 'feed' when it needs more random data.
  *   - 'fart' when result is ready.
- *
- * NOTE:
- * - max allowed value for items and range is 2^(32) - 1 (4 bytes values).
- * - virtually, there is no size limit for sequence with repetitions, instead,
- *   the max length for full (FP) and partial permutations (PP) is limited to
- *   (2^(32) - 1) values * 2^(2) bytes/values, or 16GB.
- * - unlimited repetitions for items are enabled for default (+Infinity),
- *   otherwise use repeat === 1 to produce a full or a partial range permutation.
  */
 Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
+```
+> __NOTE__:
+> - max allowed value for items and range is __2^(32) - 1__, or 4 bytes values.
+> - max output size for sequences is __16GB__. Virtually, there is no size limit
+>   for sequences with repetitions, but the max length for __FP__ and __PP__ is limited
+>   to:
+>   - ( __2^32__ values ) * ( __4__ bytes/value ), or __16GB__.
 
+------------------------------------------------------------------------------------
+
+####Transform Streams
+
+> Use a Transform stream to consume random data from an input source, it outputs
+> results within the selected _range_ of values, limiting the number to _items_.
+
+> __NOTE__: How many bytes will be consumed to produce 1 byte of result,
+> depends on many factors, items, range, repetition, but moreover on the
+> quality of random data, parsed from the input source to pipe.
+
+> See also [examples](example/).
+
+####Brando.stream
+
+```javascript
 /*
- * Like #get, but it returns a Transform stream (see examples).
- * SeqTransStream consumes random data from a input source, then outputs results
- * in the desired 'range' of values, limiting the number to 'items'.
  * For default, repeat = +Infinity, or unlimited repetitions.
  *
  * - if repeat === 1, it returns a stream that filters a full or a partial permutation.
@@ -97,7 +130,7 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
  * - otherwise, it returns a SeqTransStream (unlimited repetitions).
  *   - if items === 0, the stream consume all data that it receives, until stream ends.
  *
- * - for default, stream_opt:
+ * - for default, stream_opt is:
  * {
  *  highWaterMark : 16 * 1024
  *  , encoding : null
@@ -105,7 +138,6 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
  }
  */
 Brando#stream : function ( Number items, Number range [, Number repeat [, Object stream_opt ] ] ) : SeqTransStream
-
 ```
 
 ### MIT License
