@@ -138,11 +138,12 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
  */
 Brando#stream : function ( Number items, Number range [, Number repeat [, Object stream_opt ] ] ) : SeqTransStream
 ```
-> __NOTE__: __How many bytes will be consumed__ to produce 1 byte of result,
-> __depends on many factors__, items, range, repetition, but __moreover on the
-> quality of random data__, parsed from the input source to pipe in.
+> __NOTE__:
+>  - __How many bytes will be consumed__ to produce 1 byte of result, __depends on many factors__,
+>   items, range, repetition, but __moreover on the quality of random data__, parsed from the input
+>   source to pipe in.
 
-> See also [examples](example/).
+> See also __[stream examples](example/)__.
 
 
 ### MIT License
