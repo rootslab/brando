@@ -64,8 +64,11 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
 
 ####Brando.get
 
-> A simple factory method, it returns a _[Sequence](lib/filters/emitters/sequence)_ (_EventEmitter_), or a type that
-> inherits from _[Sequence](lib/filters/emitters/sequence)_, respectively _[FullPerm](lib/filters/emitters/fullperm)_ and _[PartPerm](lib/filters/emitters/partperm)_.
+> A simple factory method, it returns an EventEmitter that parses random data and emits results
+> with selected items and within the selelected range .
+> It repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_ (_EventEmitter_),
+> otherwise a sub-type of Sequence, if items === range, a _[FullPerm](lib/filters/emitters/fullperm)_,
+> else a _[PartPerm](lib/filters/emitters/partperm)_.
 
 ```javascript
 /*
@@ -114,8 +117,7 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 ####Brando.stream
 
 > A simple factory method, it returns a _[SeqTransStream](lib/filters/streams/sequence-transform)_
-> (_stream.Transform_), or a type that inherits from _[SeqTransStream](lib/filters/streams/sequence-transform)_,
-> respectively _[FPTransStream](lib/filters/streams/fullperm-transform)_
+> (_stream.Transform_), or a sub-type between _[FPTransStream](lib/filters/streams/fullperm-transform)_
 > and _[PPTransStream](lib/filters/streams/partperm-transform)_.
 
 ```javascript
