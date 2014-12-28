@@ -19,7 +19,7 @@
 
 [![NPM GRAPH2](https://nodei.co/npm/brando.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/brando/)
 
-> __Brando__.
+> __Brando__ _(Cave Canem)_.
 
 ###Install
 
@@ -62,13 +62,17 @@ var Brando  = require( 'brando' );
 Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
 
 /*
- * A simple factory method, it returns a Sequence EventEmitter.
+ * A simple factory method, it returns a Sequence (EventEmitter), or a type that
+ * inherits from Sequence.
  *
  * - if repeat === 1
  *   - if items >= range, it returns a FullPerm.
  *   - if items < range, a PartPerm.
- *
  * - otherwise, it returns a Sequence (unlimited repetitions).
+ *
+ * Sequence emits:
+ *   - 'feed' when it needs more random data.
+ *   - 'fart' when result is ready.
  *
  * NOTE:
  * - max allowed value for items and range is 2^(32) - 1 (4 bytes values).
