@@ -54,6 +54,13 @@ var Brando  = require( 'brando' );
 > Arguments within [ ] are optional.
 
 ```javascript
+
+/*
+ * Print some informational numbers about a particular sequence or permutation,
+ * without creating anything.
+ */
+Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
+
 /*
  * A simple factory method, it returns a Sequence EventEmitter.
  *
@@ -74,12 +81,6 @@ var Brando  = require( 'brando' );
 Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
 
 /*
- * Print some informational numbers about a particular sequence or permutation,
- * without creating anything.
- */
-Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
-
-/*
  * Like #get, but it returns a Transform stream (see examples).
  * SeqTransStream consumes random data from a input source, then outputs results
  * in the desired 'range' of values, limiting the number to 'items'.
@@ -89,8 +90,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *   - if items < range, a PPTransStream.
  *
  * - otherwise, it returns a SeqTransStream (unlimited repetitions).
- *   - if items === 0, the stream consume all data that it receives,
- *     until stream ends.
+ *   - if items === 0, the stream consume all data that it receives, until stream ends.
  *
  * - for default, stream_opt:
  * {
