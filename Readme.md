@@ -88,6 +88,10 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *
  *   Sequence#fill : function () : Sequence
  *
+ * - for executing multiple times a (trivial) Fisher-Yates shuffle, after #fill or #parse.
+ *
+ *   Sequence#shuffle : function ( [ Number times ] ) : Sequence
+ *
  * - for resetting internal status and result buffer, before reusing it:
  *
  *   Sequence#clear : function ( [ Boolean zerofill ] ) : Sequence
