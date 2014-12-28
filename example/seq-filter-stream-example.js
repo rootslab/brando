@@ -2,13 +2,17 @@ var log = console.log
     , Brando = require( '../' )
     , fs = require( 'fs' )
     , input = fs.createReadStream( './example/sample' )
-    , sts = new require( '../lib/filters/streams/sequence-transform' )( 20, 10, {} )
+    /*
+     * Read 33 values in the range 0-9, use items === 0 to
+     * read all data from the input source, until it ends.
+     */
+    , sts = new require( '../lib/filters/streams/sequence-transform' )( 33, 10, {} )
     , dstream = input.pipe( sts )
     , onRead = function () {
         var me = this
             , data = null
             ;
-        while ( data = me.read( 10 ) ) log( 'data:', data );
+        while ( data = me.read( 7 ) ) log( 'data:', data );
     }
     , onEnd = function () {
         var me = this
