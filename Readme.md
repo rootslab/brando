@@ -83,8 +83,8 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 /*
  * Like #get, but it returns a Transform stream (see examples).
  * SeqTransStream consumes random data from a input source, then outputs results
- * in the desired 'range' of values, limiting the number to 'items'. For default,
- * repeat = +Infinity (unlimited repetitions).
+ * in the desired 'range' of values, limiting the number to 'items'.
+ * For default, repeat = +Infinity, or unlimited repetitions.
  *
  * - if repeat === 1, it returns a stream that filters a full or a partial permutation.
  *   - if items >= range, it returns a FPTransStream.
