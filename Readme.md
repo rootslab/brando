@@ -92,7 +92,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : undef
  *
  *   Sequence#shuffle : function ( [ Number times ] ) : Sequence
  *
- * - before reusing Sequence, resetting internal status and/or get a new result buffer:
+ * - before reusing Sequence, resetting internal status and/or set a new result buffer:
  *
  *   Sequence#clear : function ( [ Boolean trash [, Boolean refill ] ] ) : Sequence
  *
