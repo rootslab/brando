@@ -14,7 +14,6 @@ var log = console.log
 
     }
     , onFart = function ( result, used_ratio ) {
-         etime = Date.now();
          log( '  :fart %d bytes, consumed: %d%, buffer:', result.length, ( used_ratio * 100 ).toFixed( 2 ), result );
          log();
     }
