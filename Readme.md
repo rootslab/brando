@@ -88,11 +88,11 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : undef
  *
  *   Sequence#fill : function () : Sequence
  *
- * - for executing multiple times a (trivial) Fisher-Yates shuffle, after #fill or #parse.
+ * - for executing multiple times a Fisher-Yates shuffle (using Math.random)
  *
  *   Sequence#shuffle : function ( [ Number times ] ) : Sequence
  *
- * - for resetting internal status and result buffer, before reusing it:
+ * - before reusing Sequence, resetting internal status and/or get a new result buffer:
  *
  *   Sequence#clear : function ( [ Boolean trash [, Boolean refill ] ] ) : Sequence
  *
@@ -100,7 +100,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : undef
  *
  *   Sequence#parse : function ( Buffer data ) : undefined
  *
- * - using #parse, it emits:
+ * - using #parse, Sequence emits:
  *   - 'feed' when needs more data: function ( Number miss_bytes, Number curr_usage_ratio )
  *   - 'fart' when result is ready: function ( Buffer result, Number curr_usage_ratio )
  */

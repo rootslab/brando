@@ -56,7 +56,7 @@ fp.on( 'feed', function () {
 } );
 
 fp.on( 'fart', function ( result, ratio ) {
-    log( '\n- FULLPERM(%d), SHUFFLE(%d)',fp.items, 4 - runs,'(Fisher-Yates with random source).' );
+    log( '\n- FULLPERM(%d), SHUFFLE(%d)', fp.items, 4 - runs,'(Fisher-Yates with random source).' );
     log( '  :fart:', fp.result );
     log( '- random values used: %d%\n', ( 100 * ratio ).toFixed( 2 ) );
     /*
