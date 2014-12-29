@@ -20,8 +20,6 @@ var log = console.log
         while ( data = me.read( rbytes ) ) log( 'data:', data );
     }
     , onEnd = function () {
-        var me = this
-            ;
         log( 'end' );
     }
     ;

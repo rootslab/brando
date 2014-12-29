@@ -1,5 +1,4 @@
 var log = console.log
-    , Brando = require( '../' )
     , fs = require( 'fs' )
     , input = fs.createReadStream( './example/sample' )
     , ppts = new require( '../lib/filters/streams/partperm-transform' )( 26, 52, {} )
@@ -11,8 +10,6 @@ var log = console.log
         while ( data = me.read( 2 ) ) log( 'data:', data );
     }
     , onEnd = function () {
-        var me = this
-            ;
         log( 'end' );
     }
     ;

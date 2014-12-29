@@ -15,8 +15,6 @@ var log = console.log
         while ( data = me.read( 7 ) ) log( 'data:', data );
     }
     , onEnd = function () {
-        var me = this
-            ;
         log( 'end' );
     }
     ;
