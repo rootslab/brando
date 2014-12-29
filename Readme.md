@@ -94,7 +94,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *
  * - for resetting internal status and result buffer, before reusing it:
  *
- *   Sequence#clear : function ( [ Boolean zerofill ] ) : Sequence
+ *   Sequence#clear : function ( [ Boolean trash [, Boolean zerofill ] ] ) : Sequence
  *
  * - for parsing input data from a random source:
  *
@@ -102,7 +102,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *
  * - using #parse, it emits:
  *   - 'feed' when needs more data: function ( Number miss_bytes, Number curr_usage_ratio )
- *   - 'fart' when result is ready: function ( Number missing_bytes, Buffer result, Number curr_usage_ratio )
+ *   - 'fart' when result is ready: function ( Buffer result, Number curr_usage_ratio )
  */
 Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
 ```
@@ -112,6 +112,8 @@ Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequen
 >   for sequences with repetitions, but the max length for __FP__ and __PP__ is limited
 >   to:
 >   - ( __2^32__ values ) * ( __4__ bytes/value ), or __16GB__.
+
+> See also __[emitter examples](example/)__.
 
 ------------------------------------------------------------------------------------
 

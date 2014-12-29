@@ -1,10 +1,9 @@
 var log = console.log
     , buffer = require( 'buffer' )
-    , floor = Math.floor
-    , random = Math.random
     , fs = require( 'fs' )
     , input = fs.createReadStream( './example/sample' )
     , Sequence = require( '../lib/filters/emitters/sequence' )
+    , sample_data = fs.readFileSync( './example/sample' )
     // items
     , i = 1024
     // range [0-8]
@@ -33,7 +32,8 @@ var log = console.log
  * on the average, using 9/16 or ~56.25% of random values to produce requested results;
  * it implies that we expect to consume ~2 bytes of random data for every byte of result.
  *
- * Try to use a power of 2 for range, like 8 or 16, or also 15, 17 and see different results.
+ * Try to use a power of 2 for range, like 8 or 16, use also 15, 17 and see the different
+ * results for random data consumption.
  * See also notes in filters/emitters/sequence.js.
  */
 
