@@ -8,24 +8,25 @@ var log = console.log
     , random = Math.random
     , buffer = require( 'buffer' )
     , fs = require( 'fs' )
-    , Brando = require( '../' )
     // load test data from a random sample of 16 KBytes
     , sample_data = fs.readFileSync( './example/sample' )
-    , cards = 52
-    // get a full permutation of 52 items/bytes
-    , fp = Brando.get( cards, cards, 1 )
+    , Brando = require( '../' )
+    // 
     , rand = function ( min, max ) {
         min = + min || 0;
         max = + max || 0;
         return min + floor( random() * ( max - min + 1 ) );
     }
-    , runs = 3
     , rslice = function ( data ) {
         var dlen = data.length
             ;
         // get random indexes for slicing data, obviously the slice length should be >= 52
         return data.slice( rand( 0, dlen >>> 2 ), rand( dlen >>> 1, dlen ) );
     }
+    , cards = 52
+    // get a full permutation of 52 items/bytes
+    , fp = Brando.get( cards, cards, 1 )
+    , runs = 3
     ;
 
 buffer.INSPECT_MAX_BYTES = 52;
