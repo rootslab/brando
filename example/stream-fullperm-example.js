@@ -1,5 +1,4 @@
 var log = console.log
-    , Brando = require( '../' )
     , fs = require( 'fs' )
     , input = fs.createReadStream( './example/sample' )
     , fpts = new require( '../lib/filters/streams/fullperm-transform' )( 3, 20, {} )

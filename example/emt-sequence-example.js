@@ -3,7 +3,6 @@ var log = console.log
     , fs = require( 'fs' )
     , input = fs.createReadStream( './example/sample' )
     , Sequence = require( '../lib/filters/emitters/sequence' )
-    , sample_data = fs.readFileSync( './example/sample' )
     // items
     , i = 1024
     // range [0-8]
