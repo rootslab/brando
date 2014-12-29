@@ -25,7 +25,7 @@ var log = console.log
     }
     , cards = 52
     // get a full permutation of 52 items/bytes
-    , fp = Brando.get( cards, cards, 1 )
+    , fp = Brando.emt( cards, cards, 1 )
     , runs = 3
     ;
 

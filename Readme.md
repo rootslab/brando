@@ -62,7 +62,7 @@ var Brando  = require( 'brando' );
 Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
 ```
 
-####Brando.get
+####Brando.emt
 
 > A simple factory method, it returns an EventEmitter that parses random data and emits results
 > with the number of selected items and within the selected range. Internally, it creates an empty
@@ -104,7 +104,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *   - 'feed' when needs more data: function ( Number miss_bytes, Number curr_usage_ratio )
  *   - 'fart' when result is ready: function ( Buffer result, Number curr_usage_ratio )
  */
-Brando#get : function ( Number items, Number range [, Number repeat ] ) : Sequence
+Brando#emt : function ( Number items, Number range [, Number repeat ] ) : Sequence
 ```
 > __NOTE__:
 > - max allowed value for items and range is __2^(32)-1__, or __4 bytes__ values.
