@@ -94,7 +94,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Seque
  *
  * - for resetting internal status and result buffer, before reusing it:
  *
- *   Sequence#clear : function ( [ Boolean trash [, Boolean zerofill ] ] ) : Sequence
+ *   Sequence#clear : function ( [ Boolean trash [, Boolean refill ] ] ) : Sequence
  *
  * - for parsing input data from a random source:
  *
