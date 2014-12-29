@@ -59,7 +59,7 @@ var Brando  = require( 'brando' );
 > without creating anything.
 
 ```javascript
-Brando#sham : function ( Number items, Number range [, Number repeat ] ) : Sequence
+Brando#sham : function ( Number items, Number range [, Number repeat ] ) : undefined
 ```
 
 ####Brando.emt
