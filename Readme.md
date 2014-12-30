@@ -65,12 +65,13 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : undef
 ####Brando.emt
 
 > A simple factory method, it returns an EventEmitter that parses random data and emits results
-> with the number of selected items and within the selected range. Internally, it creates an empty
-> Buffer of the length necessary to hold all requested values. It is possible to fill it with values
-> generated through Math.Random (biased result) or through a random source of data.
-> If repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_, otherwise a
-> sub-type of Sequence; when items value is equal to range, it returns a _[FullPerm](lib/filters/emitters/fullperm)_,
-> otherwise a _[PartPerm](lib/filters/emitters/partperm)_.
+> with the number of selected items and within the selected range (__unsigned integers__). Internally,
+> it creates an empty Buffer of the length necessary to hold all requested values, thent is possible
+> to fill it with values generated through Math.Random (biased result) or through a random source
+> of data.
+
+> __NOTE:__ If repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_, otherwise a
+> sub-type of Sequence; when items value is equal to range, it returns a _[FullPerm](lib/filters/emitters/fullperm)_, otherwise a _[PartPerm](lib/filters/emitters/partperm)_.
 
 ```javascript
 /*
