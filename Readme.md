@@ -2,7 +2,7 @@
 
 [![NPM VERSION](http://img.shields.io/npm/v/brando.svg)](https://www.npmjs.org/package/brando)
 [![CODACY BADGE](https://img.shields.io/codacy/b18ed7d95b0a4707a0ff7b88b30d3def.svg)](https://www.codacy.com/public/44gatti/brando)
-[![CODECLIMATE-TEST-COVERAGE](https://codeclimate.com/github/rootslab/brando/badges/coverage.svg)](https://codeclimate.com/github/rootslab/brando)
+[![CODECLIMATE-TEST-COVERAGE](https://img.shields.io/codeclimate/coverage/github/rootslab/brando.svg)](https://codeclimate.com/github/rootslab/brando)
 [![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rootslab/brando#mit-license)
 
 [![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/brando.svg)](http://travis-ci.org/rootslab/brando)
@@ -49,6 +49,16 @@ var Brando  = require( 'brando' );
  $ node test/file-name.js
 ```
 
+###Run Benchmarks
+
+> run miscellaneous benchmarks for Brando
+
+```bash
+ $ cd brando/
+ $ npm run bench
+```
+----------------------------------------------------------------------------------------------
+
 ###Methods
 
 > Arguments within [ ] are optional.
@@ -70,8 +80,7 @@ Brando#sham : function ( Number items, Number range [, Number repeat ] ) : undef
 > to fill it with values generated through Math.Random (biased result) or through a random source
 > of data.
 
-> __NOTE:__ If repetition is off, it returns a _[Sequence](lib/filters/emitters/sequence)_, otherwise a
-> sub-type of Sequence; when items value is equal to range, it returns a _[FullPerm](lib/filters/emitters/fullperm)_, otherwise a _[PartPerm](lib/filters/emitters/partperm)_.
+> __NOTE:__ If repetition is off, it returns a [Sequence](lib/filters/emitters/sequence), otherwise, when items value is equal to range, it returns a [FullPerm](lib/filters/emitters/fullperm), otherwise a [PartPerm](lib/filters/emitters/partperm).
 
 ```javascript
 /*
@@ -159,7 +168,7 @@ Brando#stream : function ( Number items, Number range [, Number repeat [, Object
 
 ### MIT License
 
-> Copyright (c) 2014 &lt; Guglielmo Ferri : 44gatti@gmail.com &gt;
+> Copyright (c) 2015 &lt; Guglielmo Ferri : 44gatti@gmail.com &gt;
 
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the

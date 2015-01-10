@@ -1,6 +1,6 @@
 {
   "name": "brando"
-  , "version": "0.0.56"
+  , "version": "0.0.57"
   , "description": "Brando."
   , "homepage": "https://github.com/rootslab/brando"
   , "private": false
@@ -42,6 +42,7 @@
   }
   , "scripts": {
     "test": "node test/run.js"
+    , "bench": "bash bench/run.sh"
   }
   , "license": "MIT"
   , "readmeFilename": "Readme.md"
