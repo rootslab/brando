@@ -1,7 +1,7 @@
 {
   "name": "brando"
-  , "version": "0.0.58"
-  , "description": "Brando."
+  , "version": "0.0.60"
+  , "description": "Brando, is a module to handle pseudo-random sequences/permutations of integers using Buffers."
   , "homepage": "https://github.com/rootslab/brando"
   , "private": false
   , "repository": {
@@ -11,6 +11,10 @@
   , "keywords": [
     "brando"
     , "random"
+    , "pseudo-random"
+    , "random buffers"
+    , "randomness"
+    , "randomize"
     , "shuffle"
     , "Fisher Yates"
     , "sequences"
@@ -29,9 +33,9 @@
     , "email": "44gatti@gmail.com"
   }
   , "dependencies": {
-     "bice" : ">=0.2.0"
+     "bice" : ">=0.2.3"
       , "bolgia" : ">=2.7.4"
-     , "toni" : ">=0.5.0"
+     , "toni" : ">=0.5.3"
   },
   "devDependencies": {
      "dado" : ">=0.2.0"

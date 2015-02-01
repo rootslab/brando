@@ -1,25 +1,25 @@
 ### Brando
 
-[![NPM VERSION](http://img.shields.io/npm/v/brando.svg)](https://www.npmjs.org/package/brando)
-[![CODACY BADGE](https://img.shields.io/codacy/b18ed7d95b0a4707a0ff7b88b30d3def.svg)](https://www.codacy.com/public/44gatti/brando)
-[![CODECLIMATE-TEST-COVERAGE](https://img.shields.io/codeclimate/coverage/github/rootslab/brando.svg)](https://codeclimate.com/github/rootslab/brando)
-[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rootslab/brando#mit-license)
+[![NPM VERSION](http://img.shields.io/npm/v/brando.svg?style=flat)](https://www.npmjs.org/package/brando)
+[![CODACY BADGE](https://img.shields.io/codacy/b18ed7d95b0a4707a0ff7b88b30d3def.svg?style=flat)](https://www.codacy.com/public/44gatti/brando)
+[![CODECLIMATE](http://img.shields.io/codeclimate/github/rootslab/brando.svg?style=flat)](https://codeclimate.com/github/rootslab/brando)
+[![CODECLIMATE-TEST-COVERAGE](https://img.shields.io/codeclimate/coverage/github/rootslab/brando.svg?style=flat)](https://codeclimate.com/github/rootslab/brando)
+[![LICENSE](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/rootslab/brando#mit-license)
 
-[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/brando.svg)](http://travis-ci.org/rootslab/brando)
-[![BUILD STATUS](http://img.shields.io/david/rootslab/brando.svg)](https://david-dm.org/rootslab/brando)
-[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/brando.svg)](https://david-dm.org/rootslab/brando#info=devDependencies)
-
-[![status](https://sourcegraph.com/api/repos/github.com/rootslab/brando/.badges/status.png)](https://sourcegraph.com/github.com/rootslab/brando)
-[![views](https://sourcegraph.com/api/repos/github.com/rootslab/brando/.counters/views.png)](https://sourcegraph.com/github.com/rootslab/brando)
-[![views 24h](https://sourcegraph.com/api/repos/github.com/rootslab/brando/.counters/views-24h.png)](https://sourcegraph.com/github.com/rootslab/brando)
-[![NPM DOWNLOADS](http://img.shields.io/npm/dm/brando.svg)](http://npm-stat.com/charts.html?package=brando)
-[![GITTIP](http://img.shields.io/gittip/rootslab.svg)](https://www.gittip.com/rootslab/)
+[![TRAVIS CI BUILD](http://img.shields.io/travis/rootslab/brando.svg?style=flat)](http://travis-ci.org/rootslab/brando)
+[![BUILD STATUS](http://img.shields.io/david/rootslab/brando.svg?style=flat)](https://david-dm.org/rootslab/brando)
+[![DEVDEPENDENCY STATUS](http://img.shields.io/david/dev/rootslab/brando.svg?style=flat)](https://david-dm.org/rootslab/brando#info=devDependencies)
+[![NPM DOWNLOADS](http://img.shields.io/npm/dm/brando.svg?style=flat)](http://npm-stat.com/charts.html?package=brando)
 
 [![NPM GRAPH1](https://nodei.co/npm-dl/brando.png)](https://nodei.co/npm/brando/)
 
 [![NPM GRAPH2](https://nodei.co/npm/brando.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/brando/)
 
-> __Brando__ _(Cave Canem)_.
+[![status](https://sourcegraph.com/api/repos/github.com/rootslab/brando/.badges/status.png)](https://sourcegraph.com/github.com/rootslab/brando)
+[![views](https://sourcegraph.com/api/repos/github.com/rootslab/brando/.counters/views.png)](https://sourcegraph.com/github.com/rootslab/brando)
+[![views 24h](https://sourcegraph.com/api/repos/github.com/rootslab/brando/.counters/views-24h.png)](https://sourcegraph.com/github.com/rootslab/brando)
+
+> __Brando__ is a module to handle __pseudo-random sequences/permutations__ of integers using Buffers.
 
 ###Install
 
