@@ -6,7 +6,7 @@ var log = console.log
     , onRead = function () {
         var me = this
             , data = null
-            , rbytes = undefined
+            , rbytes
             ;
         /*
          * When read_bytes is undefined, it streams 3 items at a time, see constructor,

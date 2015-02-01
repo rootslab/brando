@@ -1,5 +1,5 @@
 var log = console.log
-    , buffer = require( 'buffer' )
+    // , buffer = require( 'buffer' )
     , fs = require( 'fs' )
     , input = fs.createReadStream( './example/sample' )
     , Sequence = require( '../lib/filters/emitters/sequence' )
