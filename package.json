@@ -1,6 +1,6 @@
 {
   "name": "brando"
-  , "version": "0.0.60"
+  , "version": "0.0.61"
   , "description": "Brando, is a module to handle pseudo-random sequences/permutations of integers using Buffers."
   , "homepage": "https://github.com/rootslab/brando"
   , "private": false
